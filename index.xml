@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graphics y Cooking</title>
+    <link>http://robbiesri.github.io/</link>
+    <description>Recent content on Graphics y Cooking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jul 2020 22:23:09 -0700</lastBuildDate>
+    
+	<atom:link href="http://robbiesri.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kickoff</title>
+      <link>http://robbiesri.github.io/post/kickoff/</link>
+      <pubDate>Sun, 12 Jul 2020 22:23:09 -0700</pubDate>
+      
+      <guid>http://robbiesri.github.io/post/kickoff/</guid>
+      <description>I figure it&amp;rsquo;s about time that I try to disseminate some of the information that I&amp;rsquo;ve hoarded through the years. Selfishly, I&amp;rsquo;ve found that documenting something forces me truly understand whatever I&amp;rsquo;m writing about.
+This weblog is split into two primary topics:
+ Graphics Programming Home Cooking  Why these two? Why not? I care about these two things, so why not share some information? Especially in the age of COVID-19 (when this blog was born), these topics intersect more than ever!</description>
+    </item>
+    
+  </channel>
+</rss>

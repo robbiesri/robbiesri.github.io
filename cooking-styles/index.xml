@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cooking-Styles on Graphics y Cooking</title>
+    <link>http://robbiesri.github.io/cooking-styles/</link>
+    <description>Recent content in Cooking-Styles on Graphics y Cooking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://robbiesri.github.io/cooking-styles/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
