@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webdev on Graphics y Cooking</title>
+    <link>http://robbiesri.github.io/misc-topics/webdev/</link>
+    <description>Recent content in webdev on Graphics y Cooking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jul 2020 00:20:18 -0700</lastBuildDate>
+    
+	<atom:link href="http://robbiesri.github.io/misc-topics/webdev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo for Natives</title>
+      <link>http://robbiesri.github.io/post/hugo-for-natives/</link>
+      <pubDate>Tue, 14 Jul 2020 00:20:18 -0700</pubDate>
+      
+      <guid>http://robbiesri.github.io/post/hugo-for-natives/</guid>
+      <description>tl;dr  Create an empty GitHub Pages repo e.g. robbiesri/robbiesri.github.io to contain the static generated site. Create an empty git repo to hold the backing Hugo infrastructure  This can be also hosted on GitHub 😃   Install Hugo Use Hugo to initialize a new site, pick a theme, and build some content  Peep the Hugo Quick Start guide   Initialize the GitHub Pages repo as a submodule in the .</description>
+    </item>
+    
+  </channel>
+</rss>

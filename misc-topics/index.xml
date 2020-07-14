@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Misc-Topics on Graphics y Cooking</title>
+    <link>http://robbiesri.github.io/misc-topics/</link>
+    <description>Recent content in Misc-Topics on Graphics y Cooking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Jul 2020 00:20:18 -0700</lastBuildDate>
+    
+	<atom:link href="http://robbiesri.github.io/misc-topics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>webdev</title>
+      <link>http://robbiesri.github.io/misc-topics/webdev/</link>
+      <pubDate>Tue, 14 Jul 2020 00:20:18 -0700</pubDate>
+      
+      <guid>http://robbiesri.github.io/misc-topics/webdev/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
