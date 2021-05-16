@@ -3,12 +3,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Graphics y Cooking - Add comments to Hugo with utterances </title>
+    <title>Render Chef - Add comments to Hugo with utterances </title>
     
     
-    <meta content="Graphics y Cooking" name="keywords">
+    <meta content="Render Chef" name="keywords">
     
-    <meta content="Graphics y Cooking - tl;dr  Add the utterances GitHub app to your GitHub Pages repo  utterances uses GitHub Issues to manage the comments, so it needs authorization   Go through the utterances setup to create the script blob that will add comments to your blog posts. Check your theme documentation to determine where you should add your utterances script blob. Regenerate the static site (&gt; hugo), and push the modified post contents." name="description">
+    <meta content="Render Chef - tl;dr  Add the utterances GitHub app to your GitHub Pages repo  utterances uses GitHub Issues to manage the comments, so it needs authorization   Go through the utterances setup to create the script blob that will add comments to your blog posts. Check your theme documentation to determine where you should add your utterances script blob. Regenerate the static site (&gt; hugo), and push the modified post contents." name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     
@@ -40,7 +40,7 @@
     
     
     <a class="nav-self-logo" href="/">
-        Graphics y Cooking
+        Render Chef
     </a>
 
     <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
@@ -99,7 +99,7 @@ layui.use('element', function(){
 </h3>
                 </blockquote>
                 <div class="layui-card-body markdown-body single-content">
-                    <h1 id="tldr">tl;dr</h1>
+                    <h2 id="tldr">tl;dr</h2>
 <ol>
 <li>Add the <a href="https://github.com/apps/utterances">utterances GitHub app</a> to your GitHub Pages repo
 <ul>
@@ -126,7 +126,7 @@ push your theme changes anywhere.</li>
 </ul>
 </li>
 </ol>
-<h1 id="choosing-a-comment-system-for-hugo">Choosing a Comment System for Hugo</h1>
+<h2 id="choosing-a-comment-system-for-hugo">Choosing a Comment System for Hugo</h2>
 <p>I wanted to add comments, even though I anticipated most of the discussion
 for the blog posts would be on Twitter. I also thought it would be interesting
 to learn about the different systems, and integration process.</p>
@@ -151,13 +151,13 @@ Good enough for them, good enough for me.</p>
 <p>Note: I was surprised that there weren&rsquo;t (m)any comparison articles about
 picking comment systems for statically generated blogs. Maybe there&rsquo;s more in
 the <code>jekyll</code> ecosystem, but I just didn&rsquo;t find anything really useful.</p>
-<h1 id="supporting-utterances">Supporting <code>utterances</code></h1>
+<h2 id="supporting-utterances">Supporting <code>utterances</code></h2>
 <p>It was actually really simple to add <code>utterances</code> to the blog. It boiled down
 to a few simple steps:</p>
 <ol>
 <li>Authorize the <a href="https://github.com/apps/utterances">utterances GitHub app</a> on my blog repo
 <ul>
-<li>I added it to <a href="https://github.com/robbiesri/robbiesri.github.io">https://github.com/robbiesri/robbiesri.github.io</a></li>
+<li>I added it to <a href="blog">https://github.com/robbiesri/robbiesri.github.io</a></li>
 </ul>
 </li>
 <li>Generate the script blob from the <a href="https://utteranc.es/">utterances home page</a></li>
@@ -186,7 +186,7 @@ different themes live in the page. So I was able to get a quick idea of what the
 themes would look like.</p>
 <p>Also, the <code>utterances</code> comment blob shows up in the local server
 (<code>&gt; hugo server -D</code>), which was a pleasant surprise!</p>
-<h1 id="bonus-forking-the-theme">Bonus: Forking the Theme</h1>
+<h2 id="bonus-forking-the-theme">Bonus: Forking the Theme</h2>
 <p>Because I decided to host the backing Hugo store in a
 <a href="https://github.com/robbiesri/HugoBlog">GitHub repo</a>, I ran into a little snag: modifying the theme
 contents! In order to keep everything in sync remotely, I&rsquo;d have to fork the
