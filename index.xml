@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>About</title>
+      <link>http://robbiesri.github.io/about/</link>
+      <pubDate>Sun, 16 May 2021 18:28:29 -0700</pubDate>
+      
+      <guid>http://robbiesri.github.io/about/</guid>
+      <description>About Acknowledgements  proselint - Tooling to verify stylistic aspects of prose. https://github.com/richelbilderbeek - Richel Bilderbeek has crazy amount of resources to help you get bootstrapped with Travis CI. I was able to use his travis_proselint tutorial as a jumpoff point.  </description>
+    </item>
+    
+    <item>
       <title>Add comments to Hugo with utterances</title>
       <link>http://robbiesri.github.io/post/add-utterances-to-hugo/</link>
       <pubDate>Sat, 18 Jul 2020 15:12:23 -0700</pubDate>

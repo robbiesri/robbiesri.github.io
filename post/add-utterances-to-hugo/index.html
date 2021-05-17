@@ -50,6 +50,10 @@
         
 
         
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
 
         
         <li class="layui-nav-item" id="nav_small">
@@ -62,6 +66,10 @@
                 <dd><a href="/post/">Posts</a></dd>
                 
 
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
                 
             </dl>
         </li>
@@ -114,10 +122,10 @@ that will add comments to your blog posts.</li>
 <li>Regenerate the static site (<code>&gt; hugo</code>), and push the modified post contents.
 <ul>
 <li>You can test them locally with (<code>&gt; hugo server</code>) to see how the embedded
-comments look!</li>
+comments look</li>
 </ul>
 </li>
-<li>Reload your blog posts, and enjoy your new commenting system!</li>
+<li>Reload your blog posts, and enjoy your new commenting system</li>
 <li>If you are hosting your backing Hugo repo on GitHub, you&rsquo;ll need to fork the
 theme submodule, since you&rsquo;ll be modifying theme files directly.
 <ul>
@@ -137,8 +145,8 @@ setting up my own webserver, so I settled on a GitHub Issues system.
 Technically, I still don&rsquo;t <em>own</em> the comments because GitHub owns the issues.
 Plus, if I want to change the comment system, it&rsquo;ll probably be way harder to
 convert the existing comments to another format. If I had self-hosting, I could
-probably write a script to convert the old comment format. But&hellip;whatever. This
-is good enough for me.</p>
+probably write a script to convert the old comment format. But, this is good
+enough for me.</p>
 <p>I had settled on a couple systems to check out, though there are plenty:</p>
 <ul>
 <li><a href="https://github.com/gitalk/gitalk">gitalk</a></li>
@@ -166,7 +174,7 @@ to a few simple steps:</p>
 <li><a href="https://github.com/ertuil/erblog/blob/master/README.md#4-user-defined-html-hooks">ertuil/erblog</a> has a specific page for add hooks</li>
 </ul>
 </li>
-<li>Generate and push the static site, with comments added to posts!</li>
+<li>Generate and push the static site, with comments added to posts</li>
 </ol>
 <p>Really the only &lsquo;tricky&rsquo; part was figuring out where to add the script blob,
 along with experimenting with the visual appearance of the comment interface. I
@@ -189,7 +197,7 @@ themes would look like.</p>
 <h2 id="bonus-forking-the-theme">Bonus: Forking the Theme</h2>
 <p>Because I decided to host the backing Hugo store in a
 <a href="https://github.com/robbiesri/HugoBlog">GitHub repo</a>, I ran into a little snag: modifying the theme
-contents! In order to keep everything in sync remotely, I&rsquo;d have to fork the
+contents. In order to keep everything in sync remotely, I&rsquo;d have to fork the
 theme.</p>
 <p>This wasn&rsquo;t a huge deal, but then I got to modify other parts of the theme,
 which I was originally hesitant (read: too lazy) to do. But now that it&rsquo;s
