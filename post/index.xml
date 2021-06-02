@@ -22,10 +22,10 @@
     
     <item>
       <title>Hugo for Natives</title>
-      <link>http://robbiesri.github.io/post/hugo-for-natives/</link>
+      <link>http://robbiesri.github.io/post/dev/hugo-for-natives/</link>
       <pubDate>Tue, 14 Jul 2020 00:20:18 -0700</pubDate>
       
-      <guid>http://robbiesri.github.io/post/hugo-for-natives/</guid>
+      <guid>http://robbiesri.github.io/post/dev/hugo-for-natives/</guid>
       <description>tl;dr  Create an empty GitHub Pages repo e.g. robbiesri/robbiesri.github.io to contain the static generated site. Create an empty git repo to hold the backing Hugo infrastructure  This can be also hosted on GitHub 😃   Install Hugo Use Hugo to initialize a new site, pick a theme, and build some content  Peep the Hugo Quick Start guide   Initialize the GitHub Pages repo as a submodule in the .</description>
     </item>
     
