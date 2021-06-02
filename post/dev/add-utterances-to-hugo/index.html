@@ -1,0 +1,311 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Render Chef - Add comments to Hugo with utterances </title>
+    
+    
+    <meta content="Render Chef" name="keywords">
+    
+    <meta content="Render Chef - tl;dr  Add the utterances GitHub app to your GitHub Pages repo  utterances uses GitHub Issues to manage the comments, so it needs authorization   Go through the utterances setup to create the script blob that will add comments to your blog posts. Check your theme documentation to determine where you should add your utterances script blob. Regenerate the static site (&gt; hugo), and push the modified post contents." name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src="/layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js" integrity="sha256-h2tMEmhemR2IN4wbbdNjj9LaDIjzwk2hralQwfJmBOE=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+    
+    <a class="nav-self-logo" href="/">
+        Render Chef
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+            
+                <li class="layui-nav-item" id="nav_big"><a href="/about/">About</a></li>
+            
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+                    
+                        <dd><a href="/about/">About</a></dd>
+                    
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote  markdown-body single-title" >
+                    <h1>Add comments to Hugo with utterances</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-07-18</span>
+
+    
+    
+
+    
+
+    
+
+    
+    
+</h3>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h2 id="tldr">tl;dr</h2>
+<ol>
+<li>Add the <a href="https://github.com/apps/utterances">utterances GitHub app</a> to your GitHub Pages repo
+<ul>
+<li><code>utterances</code> uses GitHub Issues to manage the comments, so it needs
+authorization</li>
+</ul>
+</li>
+<li>Go through the <a href="https://utteranc.es/">utterances setup</a> to create the script blob
+that will add comments to your blog posts.</li>
+<li>Check your theme documentation to determine where you should add your
+<code>utterances</code> script blob.</li>
+<li>Regenerate the static site (<code>&gt; hugo</code>), and push the modified post contents.
+<ul>
+<li>You can test them locally with (<code>&gt; hugo server</code>) to see how the embedded
+comments look</li>
+</ul>
+</li>
+<li>Reload your blog posts, and enjoy your new commenting system</li>
+<li>If you are hosting your backing Hugo repo on GitHub, you&rsquo;ll need to fork the
+theme submodule, since you&rsquo;ll be modifying theme files directly.
+<ul>
+<li>If you are keeping the Hugo repo local, no need, since you don&rsquo;t need to
+push your theme changes anywhere.</li>
+</ul>
+</li>
+</ol>
+<h2 id="choosing-a-comment-system-for-hugo">Choosing a Comment System for Hugo</h2>
+<p>I wanted to add comments, even though I anticipated most of the discussion
+for the blog posts would be on Twitter. I also thought it would be interesting
+to learn about the different systems, and integration process.</p>
+<p>I didn&rsquo;t really want to use a comment system where I didn&rsquo;t somehow <em>own</em> the
+comments, which excluded services like Disqus. There&rsquo;s other drama associated
+with Disqus, so I was happy to skip it.</p>
+<p>That left with me either self-hosting or a system that used
+<a href="https://guides.github.com/features/issues/">GitHub Issues</a> to manage the comments. I didn&rsquo;t really feel like
+setting up my own webserver, so I settled on a GitHub Issues system.
+Technically, I still don&rsquo;t <em>own</em> the comments because GitHub owns the issues.
+Plus, if I want to change the comment system, it&rsquo;ll probably be way harder to
+convert the existing comments to another format. If I had self-hosting, I could
+probably write a script to convert the old comment format. But, this is good
+enough for me.</p>
+<p>I had settled on a couple systems to check out, though there are plenty:</p>
+<ul>
+<li><a href="https://github.com/gitalk/gitalk">gitalk</a></li>
+<li><a href="https://github.com/utterance/utterances">utterances</a></li>
+</ul>
+<p>As far as I can tell, the projects started almost the same time (H1 2017). I
+ended up picking <code>utterances</code> because the setup seemed easier, and I thought
+the comment block looked nicer. Plus I&rsquo;d seen it on some other blogs I like.
+Good enough for them, good enough for me.</p>
+<p>Note: I was surprised that there weren&rsquo;t (m)any comparison articles about
+picking comment systems for statically generated blogs. Maybe there&rsquo;s more in
+the <code>jekyll</code> ecosystem, but I just didn&rsquo;t find anything really useful.</p>
+<h2 id="supporting-utterances">Supporting <code>utterances</code></h2>
+<p>It was actually really simple to add <code>utterances</code> to the blog. It boiled down
+to a few simple steps:</p>
+<ol>
+<li>Authorize the <a href="https://github.com/apps/utterances">utterances GitHub app</a> on my blog repo
+<ul>
+<li>I added it to <a href="blog">https://github.com/robbiesri/robbiesri.github.io</a></li>
+</ul>
+</li>
+<li>Generate the script blob from the <a href="https://utteranc.es/">utterances home page</a></li>
+<li>Look at my theme documentation to determine where to add the script blob
+<ul>
+<li><a href="https://github.com/ertuil/erblog/blob/master/README.md#4-user-defined-html-hooks">ertuil/erblog</a> has a specific page for add hooks</li>
+</ul>
+</li>
+<li>Generate and push the static site, with comments added to posts</li>
+</ol>
+<p>Really the only &lsquo;tricky&rsquo; part was figuring out where to add the script blob,
+along with experimenting with the visual appearance of the comment interface. I
+was lucky that <a href="https://github.com/ertuil/erblog/blob/master/README.md#4-user-defined-html-hooks">ertuil/erblog</a> clearly defines where to add my
+customized <code>utterances</code> script blob.</p>
+<p><code>themes/erblog/layouts/partials/self-define-single.html</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://utteranc.es/client.js&#34;</span>
+        <span style="color:#a6e22e">repo</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;robbiesri/robbiesri.github.io&#34;</span>
+        <span style="color:#a6e22e">issue-term</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>
+        <span style="color:#a6e22e">label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;comments&#34;</span>
+        <span style="color:#a6e22e">theme</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;icy-dark&#34;</span>
+        <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>
+        <span style="color:#a6e22e">async</span>&gt;
+&lt;/<span style="color:#f92672">script</span>&gt;    
+</code></pre></div><p>The <a href="https://utteranc.es/">utterances home page</a> is actually great at visualizing the
+different themes live in the page. So I was able to get a quick idea of what the
+themes would look like.</p>
+<p>Also, the <code>utterances</code> comment blob shows up in the local server
+(<code>&gt; hugo server -D</code>), which was a pleasant surprise!</p>
+<h2 id="bonus-forking-the-theme">Bonus: Forking the Theme</h2>
+<p>Because I decided to host the backing Hugo store in a
+<a href="https://github.com/robbiesri/HugoBlog">GitHub repo</a>, I ran into a little snag: modifying the theme
+contents. In order to keep everything in sync remotely, I&rsquo;d have to fork the
+theme.</p>
+<p>This wasn&rsquo;t a huge deal, but then I got to modify other parts of the theme,
+which I was originally hesitant (read: too lazy) to do. But now that it&rsquo;s
+forked, it&rsquo;s been fun making changes.</p>
+<p>Though, I do wonder if Hugo itself should provide support for a standard
+comment hook, maybe somewhere in <code>config.toml</code>. But not enough to file an issue
+on their repo 😛</p>
+<script src="https://utteranc.es/client.js"
+        repo="robbiesri/robbiesri.github.io"
+        issue-term="title"
+        label="comments"
+        theme="icy-dark"
+        crossorigin="anonymous"
+        async>
+</script></div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/dev/add-utterances-to-hugo/">
+                        <h3 class="">Add comments to Hugo with utterances</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-07-18</span>
+
+    
+    
+
+    
+
+    
+
+    
+    
+</h3>
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/dev/hugo-for-natives/">
+                        <h3 class="">Hugo for Natives</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-07-14</span>
+
+    
+    
+
+    
+
+    
+
+    
+    
+</h3>
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/kickoff/">
+                        <h3 class="">Kickoff</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2020-07-12</span>
+
+    
+    
+
+    
+
+    
+
+    
+    
+</h3>
+                    </blockquote>
+                </div>
+                
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+</body>
+</html>

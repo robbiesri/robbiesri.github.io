@@ -24,10 +24,10 @@ Acknowledgements  markdownlint-cli - NPM CLI tool to run markdownlint on Markdow
     
     <item>
       <title>Add comments to Hugo with utterances</title>
-      <link>http://robbiesri.github.io/post/add-utterances-to-hugo/</link>
+      <link>http://robbiesri.github.io/post/dev/add-utterances-to-hugo/</link>
       <pubDate>Sat, 18 Jul 2020 15:12:23 -0700</pubDate>
       
-      <guid>http://robbiesri.github.io/post/add-utterances-to-hugo/</guid>
+      <guid>http://robbiesri.github.io/post/dev/add-utterances-to-hugo/</guid>
       <description>tl;dr  Add the utterances GitHub app to your GitHub Pages repo  utterances uses GitHub Issues to manage the comments, so it needs authorization   Go through the utterances setup to create the script blob that will add comments to your blog posts. Check your theme documentation to determine where you should add your utterances script blob. Regenerate the static site (&amp;gt; hugo), and push the modified post contents.</description>
     </item>
     
