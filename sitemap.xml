@@ -1,53 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>http://robbiesri.github.io/about/</loc>
-    <lastmod>2021-05-16T18:28:29-07:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/post/dev/add-utterances-to-hugo/</loc>
-    <lastmod>2020-07-18T15:12:23-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/misc-topics/</loc>
-    <lastmod>2020-07-18T15:12:23-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/post/</loc>
-    <lastmod>2020-07-18T15:12:23-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/</loc>
-    <lastmod>2020-07-18T15:12:23-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/misc-topics/webdev/</loc>
-    <lastmod>2020-07-18T15:12:23-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/post/dev/hugo-for-natives/</loc>
-    <lastmod>2020-07-14T00:20:18-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/post/kickoff/</loc>
-    <lastmod>2020-07-12T22:23:09-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/cooking-styles/</loc>
-  </url>
-  
-  <url>
-    <loc>http://robbiesri.github.io/graphics-areas/</loc>
-  </url>
-  
 </urlset>
