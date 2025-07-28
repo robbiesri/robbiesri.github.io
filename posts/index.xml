@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Render Chef</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://robbiesri.github.io/posts/</link>
     <description>Recent content in Posts on Render Chef</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© Robert Srinivasiah.</copyright>
     <lastBuildDate>Sat, 26 Jul 2025 22:47:17 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://robbiesri.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cpp Reconstruct</title>
-      <link>http://localhost:1313/posts/cpp-reconstruct/</link>
+      <link>https://robbiesri.github.io/posts/cpp-reconstruct/</link>
       <pubDate>Sat, 26 Jul 2025 22:47:17 -0700</pubDate>
-      <guid>http://localhost:1313/posts/cpp-reconstruct/</guid>
+      <guid>https://robbiesri.github.io/posts/cpp-reconstruct/</guid>
       <description>&lt;p&gt;I was refactoring some code to delay init after parsing an external source. I needed to move some of the code out of the constructor, into an init function so I could return a possible failure. &lt;em&gt;However&lt;/em&gt;, it wasn&amp;rsquo;t trivial to do because some members of the target struct can only be initialized via constructor.&lt;/p&gt;&#xA;&lt;p&gt;In this case, we have a pattern where we have &lt;code&gt;public&lt;/code&gt; data members that are constructor-built.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo for Natives</title>
-      <link>http://localhost:1313/posts/hugo-for-natives/</link>
+      <link>https://robbiesri.github.io/posts/hugo-for-natives/</link>
       <pubDate>Tue, 14 Jul 2020 00:20:18 -0700</pubDate>
-      <guid>http://localhost:1313/posts/hugo-for-natives/</guid>
+      <guid>https://robbiesri.github.io/posts/hugo-for-natives/</guid>
       <description>&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Create an empty &lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages repo&lt;/a&gt; e.g.&#xA;&lt;code&gt;robbiesri/robbiesri.github.io&lt;/code&gt; to contain the static generated site.&lt;/li&gt;&#xA;&lt;li&gt;Create an empty git repo to hold the backing Hugo infrastructure&#xA;&lt;ul&gt;&#xA;&lt;li&gt;This can be also hosted on GitHub 😃&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Install Hugo&lt;/li&gt;&#xA;&lt;li&gt;Use Hugo to initialize a new site, pick a theme, and build some content&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Peep the &lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo Quick Start guide&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Initialize the GitHub Pages repo as a submodule in the &lt;code&gt;./public&lt;/code&gt; folder&lt;/li&gt;&#xA;&lt;li&gt;Use Hugo to build the static site (&lt;code&gt;&amp;gt; hugo&lt;/code&gt;), which deploys to &lt;code&gt;./public&lt;/code&gt; by default&lt;/li&gt;&#xA;&lt;li&gt;Commit and push from your GitHub Pages submodule&lt;/li&gt;&#xA;&lt;li&gt;Go to your cool new GitHub Pages blog (robbiesri.github.io), and make it rain&#xA;💰&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;d been thinking about setting up a graphics/rendering blog for a minute now&#xA;but I didn&amp;rsquo;t really know what the path was going to be. I was vaguely aware of&#xA;&lt;a href=&#34;https://pages.github.com/&#34;&gt;GitHub Pages&lt;/a&gt;, but hadn&amp;rsquo;t spent anytime investigating what it would&#xA;take to get it up and running. The biggest issue for me is that I have no&#xA;experience with webdev, as a native C/C++ programmer.&lt;/p&gt;</description>
     </item>
   </channel>
