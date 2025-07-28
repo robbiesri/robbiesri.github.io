@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>Hugo for Natives &ndash; Render Chef</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8"/>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css" integrity="sha512-IW0nhlW5MgNydsXJO40En2EoCkTTjZhI3yuODrZIc8cQ4h1XcF53PsqDHa09NqnkXuIe0Oiyyj171BqZFwISBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="http://localhost:1313/css/palettes/base16-dark.css">
+<link rel="stylesheet" href="http://localhost:1313/css/risotto.css">
+<link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+
+
+
+
+
+
+
+</head>
+
+    <body>
+        <div class="page">
+
+            <header class="page__header"><nav class="page__nav main-nav">
+    <ul>
+    <h1 class="page__logo"><a href="http://localhost:1313/" class="page__logo-inner">Render Chef</a></h1>
+    
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="http://localhost:1313/about/" title="">About</a></li>
+    
+    <li class="main-nav__item"><a class="nav-main-item" href="http://localhost:1313/posts/" title="">Posts</a></li>
+    
+    </ul>
+</nav>
+
+</header>
+
+            <section class="page__body">
+    <header class="content__header">
+        <h1>Hugo for Natives</h1>
+    </header>
+    <div class="content__body">
+        <h2 id="tldr">tl;dr</h2>
+<ol>
+<li>Create an empty <a href="https://pages.github.com/">GitHub Pages repo</a> e.g.
+<code>robbiesri/robbiesri.github.io</code> to contain the static generated site.</li>
+<li>Create an empty git repo to hold the backing Hugo infrastructure
+<ul>
+<li>This can be also hosted on GitHub 😃</li>
+</ul>
+</li>
+<li>Install Hugo</li>
+<li>Use Hugo to initialize a new site, pick a theme, and build some content
+<ul>
+<li>Peep the <a href="https://gohugo.io/getting-started/quick-start/">Hugo Quick Start guide</a></li>
+</ul>
+</li>
+<li>Initialize the GitHub Pages repo as a submodule in the <code>./public</code> folder</li>
+<li>Use Hugo to build the static site (<code>&gt; hugo</code>), which deploys to <code>./public</code> by default</li>
+<li>Commit and push from your GitHub Pages submodule</li>
+<li>Go to your cool new GitHub Pages blog (robbiesri.github.io), and make it rain
+💰</li>
+</ol>
+<h2 id="context">Context</h2>
+<p>I&rsquo;d been thinking about setting up a graphics/rendering blog for a minute now
+but I didn&rsquo;t really know what the path was going to be. I was vaguely aware of
+<a href="https://pages.github.com/">GitHub Pages</a>, but hadn&rsquo;t spent anytime investigating what it would
+take to get it up and running. The biggest issue for me is that I have no
+experience with webdev, as a native C/C++ programmer.</p>
+<p>One day, I was looking at the big homie <a href="https://therealmjp.github.io/">MJP&rsquo;s blog</a> when I realized
+it was now hosted on GitHub Pages. I started to snoop around and noticed he was
+using <a href="https://gohugo.io/">Hugo</a>. I snooped around the <a href="https://github.com/TheRealMJP/TheRealMJP.github.io">blog&rsquo;s backing repo</a>,
+and it seemed reasonable enough.</p>
+<p>Because I&rsquo;m a webdev rube, I was hoping to find a setup that let me write posts
+in Markdown, publish quickly, is well-documented, and have some simple hooks
+webpage configuration hooks. Once I started to investigate Hugo, it checked
+most of the boxes, along with being fast (at least, advertised as fast) and
+well-liked on GitHub. I did try to do some due diligence about other static site
+generators, but that seemed like boondoggle, so I settled on Hugo.</p>
+<h2 id="hugo-setup">Hugo Setup</h2>
+<p>Setting up Hugo was pretty damn easy, and the
+<a href="https://gohugo.io/getting-started/quick-start/">Quick Start guide</a> is plenty good to get setup quick.</p>
+<h3 id="install">Install</h3>
+<p>If you&rsquo;re on Linux/Mac, you can probably just use your preferred package manager
+to grab Hugo. If you&rsquo;re like me, on Windows, you can grab a binary drop on the
+<a href="https://github.com/gohugoio/hugo/releases">Hugo releases page</a>. Whatever platform you&rsquo;re on, make sure you
+the <code>hugo</code> binary is easily accessible, probably by adding it to your <code>PATH</code>
+environment variable.</p>
+<h3 id="test-site">Test Site</h3>
+<p>If you go through the official Quick Start, it&rsquo;s pretty simple to create a test
+site, add a theme, and load up a local server to browse your site. Hugo is as
+fast as advertised. Once you start the server, it&rsquo;s actually really simple to
+modify your posts and see them get <em>instantly</em> updated on the rendered page.</p>
+<h3 id="themes">Themes</h3>
+<p>Picking a theme is both fun and stressful, especially when everything is brand
+spanking new. The <a href="https://themes.gohugo.io/">Hugo Themes</a> listing is fun to navigate, and
+each theme landing page was useful info, a sample site, and repo.</p>
+<p>Once you pick a theme, make sure you snoop around the theme&rsquo;s README to figure
+out what you need to know when setting up your theme.</p>
+<p>I ended up choosing <a href="https://themes.gohugo.io/erblog/">erblog</a> because the test site was appealing,
+and the README seemed decent. While I&rsquo;ve had a couple hiccups during setup,
+I&rsquo;ve been satisfied with the experience so far.</p>
+<h2 id="github-pages-setup">GitHub Pages Setup</h2>
+<p>Once you&rsquo;re comfortable with your test site, you can start the process for
+setting up the actual site. You will need two Git repos:</p>
+<ul>
+<li>GitHub Pages repo - <code>github.com/\&lt;USERNAME\&gt;/\&lt;USERNAME\&gt;.github.io</code>
+<ul>
+<li>You need to create an (empty) repo at the above URL. This has to be on GitHub.</li>
+<li>e.g. <a href="rs-gh-io">https://github.com/robbiesri/robbiesri.github.io</a></li>
+</ul>
+</li>
+<li>Hugo site container repo
+<ul>
+<li>This will contain the Hugo site contents that source the static site, along
+with the theme and GitHub Pages repo as submodules.</li>
+<li>This doesn&rsquo;t <em>have</em> to be on GitHub but I did
+<a href="https://github.com/robbiesri/HugoBlog">host mine on GitHub</a> because why not?</li>
+</ul>
+</li>
+</ul>
+<p>You should create your site container repo, add your theme as a submodule, and
+add your GitHub Pages repo as a submodule as well. There is a <em>trick</em> with the
+Pages submodule: you want to clone it into a folder called <code>public</code> because
+that&rsquo;s the default folder that Hugo will generate the static site into. You can
+actually choose the folder name, but I just used the default (as suggested by
+the <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/">Hugo GitHub deployment guide</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt; git clone https://github.com/robbiesri/HugoBlog
+</span></span><span style="display:flex;"><span>&gt; hugo new site HugoBlog <span style="color:#f92672">[</span>--force<span style="color:#f92672">]</span> 
+</span></span><span style="display:flex;"><span>&gt; cd ./HugoBlog
+</span></span><span style="display:flex;"><span>&gt; git add .
+</span></span><span style="display:flex;"><span>&gt; git commit -m <span style="color:#e6db74">&#34;Initial Hugo infrastructure deployment&#34;</span>
+</span></span><span style="display:flex;"><span>&gt; git submodule add https://github.com/ertuil/erblog themes/erblog
+</span></span><span style="display:flex;"><span>&gt; git commit -m <span style="color:#e6db74">&#34;Add erblog theme&#34;</span>
+</span></span><span style="display:flex;"><span>&gt; git submodule add https://github.com/robbiesri/robbiesri.github.io public
+</span></span></code></pre></div><p>Now you can work on creating content you&rsquo;d like to be on  your site. You can
+see how your page will look by using <code>hugo server</code>, and pointing your browser to
+<a href="http://localhost:1313">http://localhost:1313</a>.</p>
+<h2 id="deploying-the-site">Deploying the Site</h2>
+<p>Once you are ready to push your site to GitHub pages, it&rsquo;s pretty easy. If you
+added posts, make sure you update the post meta-data to set their <code>draft</code> status
+to <code>false</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>&gt; cd ~./HugoBlog
+</span></span><span style="display:flex;"><span>&gt; hugo
+</span></span><span style="display:flex;"><span>&gt; cd ./public
+</span></span><span style="display:flex;"><span>&gt; git add .
+</span></span><span style="display:flex;"><span>&gt; git commit -m <span style="color:#e6db74">&#34;Initial Hugo-generated static deployment for blog!&#34;</span>
+</span></span><span style="display:flex;"><span>&gt; git push
+</span></span></code></pre></div><p>Then surf over to your GitHub page (e.g. robbiesri.github.io) and enjoy the
+fruits of your virtual labor (and GitHub and Hugo and your theme).</p>
+<h2 id="workflows">Workflows</h2>
+<h3 id="drafts">Drafts</h3>
+<p>To be honest, I didn&rsquo;t understand <em>what</em> the draft functionality was for.
+Either the page was deployed, or it wasn&rsquo;t. As long as I didn&rsquo;t update the
+static deployment, I was safe. However, I quickly took advantage of drafting
+some posts without worrying about accidentally rolling them out to the public
+site (though anyone can check out my open-source Hugo repo 😉).</p>
+<h3 id="github-pages-deployment-branch">GitHub Pages Deployment Branch</h3>
+<p>According to the <a href="https://docs.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub Pages publishing doc</a>, I&rsquo;m
+supposed to be able to <em>choose</em> what branch my site is published from. However,
+when I looked at the actual Settings for my repo, that wasn&rsquo;t the case.</p>
+<p><img src="/post_content/misc/gh_pages_branch.PNG" alt="Settings pic from my repo"></p>
+<p>I don&rsquo;t mind being fixed to <code>master</code> for publishing, but I wish the docs matched
+the actual behavior. I was confused when I tried changing the branch (since I
+don&rsquo;t use <code>master</code> as the default branch if I can help it).</p>
+<h3 id="deployment-activity-log">Deployment Activity Log</h3>
+<p>When I was trying to figure out if my site was actually deployed, I found that
+there was an <a href="https://github.com/robbiesri/robbiesri.github.io/deployments/activity_log?environment=github-pages">activity log</a> that GitHub provides:</p>
+<p><img src="/post_content/misc/gh_pages_activity.PNG" alt="robbiesri.github.io Activity Log"></p>
+<p>With this, I was able to see which commit the current deployment was grabbing.
+This helped me verify and understand if my site was working as expected.</p>
+<h2 id="pending-stuff">Pending Stuff</h2>
+<h3 id="markdown-editor">Markdown Editor</h3>
+<p>One of the benefits of Google was a really nice internal Markdown editor in the
+web-based IDE, Cider. It provided instant visualization of the Markdown I was
+writing, a really great integrated Markdown formatter (like <code>.clang-format</code> for
+Markdown), and an easy full render of the generated site (that was also easy to
+share).</p>
+<p>I don&rsquo;t have that out in the wild. That I know of, at least. I have snooped
+around for alternatives. I drafted this post in <a href="https://stackedit.io/">StackEdit</a>, and it
+was pretty fun. However, it doesn&rsquo;t really offer any formatting support.
+And if you are using locally hosted images, it doesn&rsquo;t work with an online
+editor.</p>
+<p>I usually write local Markdown in VS Code, and the built-in visualizer
+(<code>Ctrl-Shift-v</code>) is pretty great. But I don&rsquo;t like toggling between tabs. There
+is support for <a href="https://code.visualstudio.com/docs/languages/markdown">side-by-side viz</a>, but the last time I tested it, it
+didn&rsquo;t really work. I also found an interesting
+<a href="https://marketplace.visualstudio.com/items?itemName=mervin.markdown-formatter">Markdown formatting extension</a>. I think I&rsquo;ll stick with VS
+Code for now.</p>
+<h3 id="hugo-themeconfig-management">Hugo Theme/Config Management</h3>
+<p>You gotta pay the cost to be the boss, but I was slightly annoyed with the time
+it took for me to figure out how to manage <code>config.toml</code> and the per-post
+meta-data. It&rsquo;s surprisingly hard to find <em>good</em> examples for how to set this
+stuff up. I can find thousands of Hugo sites, but which ones are modelling best
+practices? It&rsquo;s even more difficult to find good theme citizenry, especially
+when the <a href="https://themes.gohugo.io/theme/erblog/">erblog sample site</a> isn&rsquo;t terribly complex (which is
+fine).</p>
+<p>On top of that, figuring out <a href="https://gohugo.io/content-management/taxonomies#configure-taxonomies">Hugo taxonomies</a> was really
+frustrating. Maybe it&rsquo;s more intuitive to a day-to-day webdev, but it took
+me a while to figure out how to manage this correctly.</p>
+
+    </div>
+    <footer class="content__footer"></footer>
+
+            </section>
+
+            <section class="page__aside">
+                <div class="aside__about">
+
+<ul class="aside__social-links">
+    
+</ul>
+</div>
+                <hr>
+                <div class="aside__content">
+    
+    
+        <p>
+            
+            2020-07-14
+        </p>
+    
+
+    
+
+                </div>
+            </section>
+
+            <footer class="page__footer"><p>
+    
+    
+    
+    
+    
+    
+      
+    
+      
+    
+    
+    
+      
+      
+          
+            
+            
+                <br/><span class="active">$ echo $LANG<br/><b></b></span><br/>
+
+            
+          
+      
+    
+</p>
+<br /><br />
+<p class="copyright">© Robert Srinivasiah.</p>
+<p class="advertisement">Powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/joeroe/risotto">risotto</a>.</p>
+</footer>
+
+        </div>
+    </body>
+
+</html>

@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Render Chef</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Render Chef</description>
+    <title>Posts on Render Chef</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Render Chef</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© Robert Srinivasiah.</copyright>
     <lastBuildDate>Sat, 26 Jul 2025 22:47:17 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cpp Reconstruct</title>
       <link>http://localhost:1313/posts/cpp-reconstruct/</link>
       <pubDate>Sat, 26 Jul 2025 22:47:17 -0700</pubDate>
       <guid>http://localhost:1313/posts/cpp-reconstruct/</guid>
       <description>&lt;p&gt;I was refactoring some code to delay init after parsing an external source. I needed to move some of the code out of the constructor, into an init function so I could return a possible failure. &lt;em&gt;However&lt;/em&gt;, it wasn&amp;rsquo;t trivial to do because some members of the target struct can only be initialized via constructor.&lt;/p&gt;&#xA;&lt;p&gt;In this case, we have a pattern where we have &lt;code&gt;public&lt;/code&gt; data members that are constructor-built.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Sat, 26 Jul 2025 22:20:51 -0700</pubDate>
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Working with games, rendering and GPUs since 2007! Currently on working something secret.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/robbiesri&#34;&gt;https://github.com/robbiesri&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.linkedin.com/in/robbies/&#34;&gt;https://www.linkedin.com/in/robbies/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Hugo for Natives</title>
